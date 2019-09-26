@@ -32,6 +32,7 @@ func setup(c *caddy.Controller) error {
 	siteConfig := httpserver.GetConfig(c)
 	siteConfig.AddMiddleware(func(next httpserver.Handler) httpserver.Handler {
 		return httpserver.HandlerFunc(func(w http.ResponseWriter, r *http.Request) (int, error) {
+			panic("ERROR")
 			for _, rule := range rules {
 				if httpserver.Path(r.URL.Path).Matches(rule.Path) {
 					rule.Conf.HandleRequest(w, r)
