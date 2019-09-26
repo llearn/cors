@@ -2,6 +2,7 @@ package cors
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"regexp"
 )
@@ -46,6 +47,8 @@ func Default() *Config {
 // Read the request, setting response headers as appropriate.
 // Will NOT write anything to response in any circumstances.
 func (c *Config) HandleRequest(w http.ResponseWriter, r *http.Request) {
+	log.Println("EEEEEEEEEEE")
+	panic("EEEEEE")
 	requestOrigin := r.Header.Get(originKey)
 	if requestOrigin == "" {
 		return

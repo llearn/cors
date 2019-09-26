@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/captncraig/cors"
+	"github.com/llearn/cors"
 
 	"github.com/caddyserver/caddy"
 	"github.com/caddyserver/caddy/caddyhttp/httpserver"
